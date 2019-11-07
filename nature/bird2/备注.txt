@@ -1,0 +1,8 @@
+
+要求：
+       1.图片高度大于690像素。
+       2.动物元素尽量在图片水平方向的中间部分
+       3.声音格式：
+        	Ogg Vorbis（Firefox 3.5/Opera 10.5/Chrome 3.0），
+       	MP3（IE 9/Chrome 3.0/Safari 3.0），
+	Wav（Firefox 3.5/Opera 10.5/Safari 3.0）

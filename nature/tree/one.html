@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>古树名木和经济林木</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="wrap one">
+			<div class="one_list">
+				<ul>
+					<li id="1"><a href="javascript:;">珍惜的古木名树</a>
+					</li>
+					<li id="2"><a href="javascript:;">特色经济林木</a>
+					</li>
+				</ul>
+				<div id="describe">
+					<div class="one_describe">
+						<div class="one_info">株洲现存古树名木共有26科41属53种，其中500年以上
+							的241株，300年至499年的642株，100年至299年的22108
+							株，县城建成区30年至99年的7155株。现存的古树名木中，
+							马尾松最多，达8908株，其次为香樟，达7850株，柯木排
+							在第三，有2995株，最为稀少的是水杉、榔榆，各仅存1株。
+							攸县南方红豆杉、炎陵穗花杉原生群落属濒危物种，是栖生
+							于株洲的植物活化石。其他较名贵的还有大院冷杉、罗汉松、
+							铁杉等。普查中年龄最大的树属攸县柏市乡的南方红豆杉，
+							树龄已达2400多年；胸径最大的树是位于茶陵县秩堂乡吉川
+							村的樟树，胸径3.5米、高12米。
+						</div>
+					</div>
+					<div class="one_describe">
+						<div class="one_info">
+							经济林木是指以生产干鲜果品、食用油料、饮料、调味
+							料、香料、工业原料、药材和木材等为主要目的林木。株洲
+							地区山地、丘陵分布面广，经济林木类品种多样，其中，楠
+							竹、油茶树、茶叶、玉环柚、柰李、高山雪晶梨、黄桃等林
+							木，不仅产量大，而且品质优良，是株洲市的特色经济林木
+							资源。 
+						</div>
+					</div>
+					<div class="one_describe on">
+						<div class="one_title">茂盛的植物</div>
+						<div class="one_info">株洲域内植物种属古老，种类繁多，群落交错，分布混杂，自然分布和引种栽培的植物约有106科、296属、884种。其中珍稀乡土树种40余种。古树名木3万余株，其中500年以
+							上的国家一级古树245株。全市森林覆盖率42.2%，炎陵县桃
+							源洞有原始森林面积10万多亩，全市活林蓄积量1179.85万
+							立方米。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=""><div class="one_img"><img src="img/one_img.png" /></div><div class="one_in" style="display: none;"><a href="javascript:;" ><img src="img/one_in.png" /></a></div></div>
+		</div>
+	</body>
+	<script>
+		var ind = "";
+		$(".one_list li a").click(function(){
+			$(".one_list li").each(function(){
+				$(this).removeClass("on");
+			})
+			$(this).parents("li").addClass("on");
+			$("#describe .one_describe").each(function(){
+				$(this).removeClass("on");
+			})
+			ind = $(this).parents("li").attr("id");
+			$("#describe .one_describe:nth-child("+Number(ind)+")").addClass("on");
+			$(".one_in").show();
+		})
+		$(".one_in").click(function(){
+			window.location.href="two.html?id="+ind;
+		})
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>株洲如此多娇</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrap one">
+			<div class="index_name">株洲如此多娇</div>
+			<div class="one_content">
+				<ul>
+					<li>矿产资源</li>
+					<li>地形地貌</li>
+					<li>珍惜动物</li>
+					<li>名贵植物</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script>
+		$(".one_content li a").click(function(){ // 切换功能
+			$(".one_content li").each(function(){
+				$(this).removeClass("on");
+			})
+			$(this).parents("li").addClass("on");
+			$(this).siblings("div").find('video')[0].play();
+		})
+	</script>
+</html>

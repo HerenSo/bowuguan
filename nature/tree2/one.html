@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>农作物和商货土特产</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="wrap one">
+			<div class="one_list">
+				<ul>
+					<li id="1"><a href="javascript:;">品类多样的农作物</a>
+					</li>
+					<li id="2"><a href="javascript:;">山货土产与中药材</a>
+					</li>
+				</ul>
+				<div id="describe">
+					<div class="one_describe">
+						<div class="one_info">株洲是名副其实的膏腴之地，适宜多种农作物生长。根据地方志书的记载，本地种植的粮油作物有471个品种，其中水稻316个，红薯114个，玉米及高粱6个，大豆6个，杂豆7个，大、小麦7个，油菜9个，花生6个。蔬菜作物有21科，63个种，248个品种。
+						</div>
+					</div>
+					<div class="one_describe">
+						<div class="one_info">株洲山林分布广泛，山中特色山货丰富，尤以绞股兰、玉兰片、竹笋、魔芋、香菇、木耳等品类为多。山地适宜药材生长，素有“天然中药材仓库”的美称，域内发现的中药材400余种。
+						</div>
+					</div>
+					<div class="one_describe on">
+						<div class="one_title">茂盛的植物</div>
+						<div class="one_info">株洲域内植物种属古老，种类繁多，群落交错，分布混杂，自然分布和引种栽培的植物约有106科、296属、884种。其中珍稀乡土树种40余种。古树名木3万余株，其中500年以上的国家一级古树245株。全市森林覆盖率42.2%，炎陵县桃源洞有原始森林面积10万多亩，全市活林蓄积量1179.85万立方米。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=""><div class="one_img"><img src="img/one_img.png" /></div><div class="one_in" style="display: none;"><a href="javascript:;" ><img src="img/one_in.png" /></a></div></div>
+		</div>
+	</body>
+	<script>
+		var ind = "";
+		$(".one_list li a").click(function(){
+			$(".one_list li").each(function(){
+				$(this).removeClass("on");
+			})
+			$(this).parents("li").addClass("on");
+			$("#describe .one_describe").each(function(){
+				$(this).removeClass("on");
+			})
+			ind = $(this).parents("li").attr("id");
+			$("#describe .one_describe:nth-child("+Number(ind)+")").addClass("on");
+			$(".one_in").show();
+		})
+		$(".one_in").click(function(){
+			window.location.href="two.html?id="+ind;
+		})
+	</script>
+</html>

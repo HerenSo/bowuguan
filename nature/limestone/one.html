@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>石灰岩</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrap one">
+			<div class="one_name">石灰岩地貌</div>
+
+			<div class="one_content">
+				<ul>
+					<li class="on">
+						<div class="one_text pt220 indent2em">中国喀斯特地貌分布之广泛，类型之多，为世界所罕见，主要集中在云贵高原和四川西南部。在中国，作为喀斯特地貌发育的物质基础──碳酸盐类岩石(如石灰石、白云岩、石膏和岩盐等)分布很广。据不完全统计，总面积达200万平方公里，其中裸露的碳酸盐类岩石面积约130万平方公里，约占全国总面积的1/7；埋藏的碳酸盐岩石面积约70万平方公里。碳酸盐岩石在全国各省区均有分布。株洲石灰岩地貌主要分布在醴陵东部、攸县东部和茶陵北部一带，表现为喀斯特晚期地貌特征，发育了较多的风景绮丽的石灰岩溶洞。著名的有攸县白龙洞、皮佳洞，茶陵县秦人洞、公颜龙洞。</div>
+						<a href="javascript:;">简介</a>
+					</li>
+					<li>
+						<div class="one_text pt150">
+							<video width="800" height="" class="video">
+								<source src="img/video/1.mp4" type="video/mp4"></source>
+								<!--<source src="img/video/1.ogv" type="video/ogg"></source>
+								<source src="img/video/1.webm" type="video/webm"></source>-->
+								<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+									<param name="movie" value="myvideo.swf" />
+									<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+								</object>
+								当前浏览器不支持 video直接播放<!--，点击这里下载视频： <a href="myvideo.webm">下载视频</a>-->
+							</video>
+						</div>
+						<a href="javascript:;">石灰岩地貌的形成</a>
+					</li>
+					<li>
+						<div class="one_text pt150">
+							<video width="800" height="" class="video">
+								<source src="img/video/1.mp4" type="video/mp4"></source>
+								<!--<source src="img/video/1.ogv" type="video/ogg"></source>
+								<source src="img/video/1.webm" type="video/webm"></source>-->
+								<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+									<param name="movie" value="myvideo.swf" />
+									<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+								</object>
+								当前浏览器不支持 video直接播放<!--，点击这里下载视频： <a href="myvideo.webm">下载视频</a>-->
+							</video>
+						</div>
+						<a href="javascript:;">石灰岩知识问答</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script>
+		$(".one_content li a").click(function(){ // 切换功能
+			$(".one_content li").each(function(){
+				$(this).removeClass("on");
+			})
+			$(this).parents("li").addClass("on");
+			$(this).siblings("div").find('video')[0].play();
+		})
+	</script>
+</html>

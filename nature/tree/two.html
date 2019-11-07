@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>古树名木和经济林木</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		
+	</head>
+	<body class="">
+		<div class="wrap two">
+			<div class="two_info">
+				<ul class="two_tag">
+					<li class="on" id = "describe">形态特征</li>
+					<li  id = "environment">生长环境</li>
+					<li  id = "distribution">分布范围</li>
+					<li  id = "chiefvalue">主要价值</li>
+				</ul>
+				<div id="info">
+					<div class="on">
+						<div class="two_type">柏目 | 红豆杉科 | 红豆杉属<br/>拉丁文名：Taxus wallichiana var. mairei (Leme & H. Lv.)L. K. Fu & Nan Li</div>
+						<div class="info_inb">南方红豆杉，是第四纪冰川遗留下来的古老树种，在地球上已有250万年的历史，
+							常绿乔木，大枝开展。最高可达30米，胸径可达60～100厘米。树皮灰褐色、红褐色
+							或暗褐色三种，纵裂成长条薄片；芽鳞顶端钝或稍尖，脱落或部分宿存于小枝基部。
+							叶排列两列，近镰刀形，长1.5～4.5厘米，背面中脉带上无乳头角质突起，或有时有
+							零星分布。球花单性,雌雄异株,常生于叶腋,雄球花呈淡黄色，圆球形，雌球花则为短
+							柄,基部具数交叉对生的苞片顶端直生1个胚珠。种子倒卵圆形或柱状长卵形，上宽下
+							窄，长7～8毫米，生于红色肉质杯状假种皮中，花期为四月下旬至5月初，十一月初
+							种子基本成熟。属国家一级重点保护野生植物。</div>
+					</div>
+				</div>
+			</div>
+			<div class="two_btn">
+				<ul>
+					<!--<li class="on" data-id=>南方红豆杉</li>
+					<li>穗花杉</li>
+					<li>马尾松</li>
+					<li>香樟</li>
+					<li>资源冷杉</li>
+					<li>罗汉松</li>
+					<li>铁杉</li>
+					<li>水杉</li>
+					<li>榔榆</li>
+					<li>柯木</li>-->
+				</ul>
+			</div>
+			<div class="two_img">
+				<ul>
+					<li><span><img src="img/two_img1.jpg" /></span></li>
+					<li><span><img src="img/two_img2.jpg" /></span></li>
+					<li><span><img src="img/two_img3.jpg" /></span></li>
+					<li><span><img src="img/two_img4.jpg" /></span></li>
+				</ul>
+			</div>
+			<div class="two-back"><img src="img/back.png" /></div>
+			<div class="two_play" style="display: none;">
+				<div class="mask"></div>
+				<div class="play_img">
+					<span><img src="img/two_img1.jpg" id="playimg" /></span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="data.js"></script>
+		<script  type="text/javascript">
+			var ind = window.location.search.substr(-1,1);
+			var list = treelist;
+			if(ind == "2"){
+				list = treelist2;
+			}
+			var funid = 0;
+			$("#info").html(infohtml(list,0,'describe'));
+			$(".two_btn ul").html(btnhtml(list));
+			$(".two_img ul").html(imghtml(list,0));
+			$(".two_btn li").click(function(){ // 切换类型
+				$(".two_btn li").each(function(){
+					$(this).removeClass("on");
+				})
+				$(this).addClass("on");
+				$(".two_tag li").each(function(){
+					$(this).removeClass("on");
+				})
+				$(".two_tag li:first-child").addClass("on");
+				funid = Number($(this).attr("data-id"));
+				$("#info").html(infohtml(list,funid,'describe'));
+				$(".two_img ul").html(imghtml(list,funid));
+			})
+			$(".two_tag li").click(function(){ // 切换功能
+				$(".two_tag li").each(function(){
+					$(this).removeClass("on");
+				})
+				$(this).addClass("on");
+				var lid = $(this).attr("id");
+				$("#info").html(infohtml(list,funid,lid));
+			})
+			$("body").on("click",".two_img li",function(){
+				console.log(123)
+				$(".two_play").fadeIn(2000);
+				$("#playimg").attr("src",$(this).find("img").attr("src"));
+			})
+			$(".mask").click(function(){
+				$(".two_play").fadeOut(1000);
+			})
+			$(".two-back").click(function(){ // 返回
+				window.history.go(-1);
+			})
+			function btnhtml(data,index){ // 数据 类型下标
+				var btnhtml = '';
+				data.map((item,i) => {
+					if(ind == "2"){
+						if(i===0){
+							btnhtml += '<li class="on pd" data-id="'+i+'">'+item.name+'</li>'
+						}else{
+							btnhtml += '<li class="pd" data-id="'+i+'">'+item.name+'</li>'
+						}
+					}else{
+						if(i===0){
+							btnhtml += '<li class="on" data-id="'+i+'">'+item.name+'</li>'
+						}else{
+							btnhtml += '<li data-id="'+i+'">'+item.name+'</li>'
+						}
+					}
+				})
+				return btnhtml;
+			}
+			function imghtml(data,index){ // 数据 类型下标
+				var imghtml = '';
+				data[index].imglist.map((item,i) => {
+					imghtml += '<li><span><img src="img/images/'+item.urls+'" /></span></li>';
+				})
+				return imghtml;
+			}
+			function infohtml(data,index,id){ // 数据 类型下标 功能下标
+//				console.log(data,index,id)
+				var infohtml ='';
+				switch(id){
+					case "describe":
+						infohtml = '<div>'
+							+'<div class="two_type">'+data[index].type+'<br/>'+data[index].scname+'</div>'
+							+'<div class="info_inb">'+data[index].describe+'</div>'
+						+'</div>'
+					break;
+					case "environment":
+						infohtml = '<div>'
+							+'<div class="info_inb">'+data[index].environment+'</div>'
+						+'</div>'
+					break;
+					case "distribution":
+					infohtml = '<div>'
+						+'<div class="info_inb">'+data[index].distribution+'</div>'
+					+'</div>'
+					break;
+					case "chiefvalue":
+					infohtml = '<div>'
+						+'<div class="info_inb">'+data[index].chiefvalue+'</div>'
+					+'</div>'
+					break;
+					default:break;
+				}
+				return infohtml;
+			}
+		</script>
+</html>

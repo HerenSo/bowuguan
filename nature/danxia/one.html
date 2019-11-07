@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>丹霞地貌</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrap one">
+			<div class="one_name">丹霞地貌</div>
+
+			<div class="one_content">
+				<ul>
+					<li class="on">
+						<div class="one_text indent2em pt220">1928年，获美国哥伦比亚大学地质学硕士学位的矿床学家冯景兰，在我国广东
+省韶关市仁化县丹霞山注意到了分布广泛的第三纪（6500万年～165万年前）红色
+砂砾岩层。在丹霞山地区，厚达300～500米的岩层被流水、风力等风化侵蚀，形
+成了堡垒状的山峰和峰丛、千姿百态的奇石、石桥和石洞。冯景兰意识到这是一种
+独特的地貌景观，并把形成丹霞地貌的红色砂砾岩层命名为丹霞层。而“丹霞”一
+词源自曹丕的《芙蓉池作诗》，“丹霞夹明月，华星出云间”，指天上的彩霞。</div>
+						<a href="javascript:;">简介</a>
+					</li>
+					<li>
+						<div class="one_text pt150">
+							<video width="800" height="" class="video">
+								<source src="img/video/1.mp4" type="video/mp4"></source>
+								<!--<source src="img/video/1.ogv" type="video/ogg"></source>
+								<source src="img/video/1.webm" type="video/webm"></source>-->
+								<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+									<param name="movie" value="myvideo.swf" />
+									<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+								</object>
+								当前浏览器不支持 video直接播放<!--，点击这里下载视频： <a href="myvideo.webm">下载视频</a>-->
+							</video>
+						</div>
+						<a href="javascript:;">形成过程视频演示</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script>
+		$(".one_content li a").click(function(){ // 切换功能
+			$(".one_content li").each(function(){
+				$(this).removeClass("on");
+			})
+			$(this).parents("li").addClass("on");
+			$(this).siblings("div").find('video')[0].play();
+		})
+	</script>
+</html>
