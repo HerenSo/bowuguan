@@ -42,7 +42,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .pb10{padding-bottom: 10px;}
 .pt15{padding-top: 15px;}
 .pb15{padding-bottom: 15px;}
-.pt220{padding-top: 220px;}
+.pt220{padding-top: 166px;}
 .pt150{padding-top: 150px;}
 .indent2em{text-indent: 2em;}
 
@@ -50,7 +50,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .index{ background: #fff;}
 .wrap{width: 1280px; height: 1024px;margin: 0 auto; position: relative; background: url(../img/index_bg.jpg) no-repeat center top #fff;background-size: 100% 100%; color: #fff; font-family: benmo;}
 .index_name{font-size:124px; text-align: center; padding-top: 210px;}
-.index_text{padding: 120px 40px 0 70px; font-size: 25px; line-height: 42px; text-indent: 2em;}
+.index_text{padding: 120px 110px 0 80px; font-size: 25px; line-height: 42px; font-family: siyuan;}
 .goin{width: 300px; height: 130px; position: absolute; bottom: 54px; left:50%; margin-left:-150px;text-align: center; animation: goin 1s linear 0s infinite;}
 .goin a{color: #fff; font-size: 50px;}
 @keyframes goin {
@@ -67,7 +67,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .one_content ul li:nth-child(1) a{background: url(../img/fun_3.png) no-repeat center center; top: 74px;}
 .one_content ul li:nth-child(2) a{background: url(../img/fun_2.png) no-repeat center center; top: 400px}
 .one_content ul li:nth-child(3) a{background: url(../img/fun_1.png) no-repeat center center; top: 480px;}
-.one_content ul li .one_text{display: none; position: absolute; letter-spacing: 1px; left: 2px; width: 730px; height: 410px; line-height: 35px; font-size: 18px;}
+.one_content ul li .one_text{display: none; position: absolute; padding-left: 40px;  left: 2px; width: 692px; height: 410px; line-height: 35px;font-family: siyuan; font-size:20px;}
 .one_content ul li.on a{color: #e08e51;}
 .one_content ul li.on .one_text{display: block;}
 .one_content ul li.on:nth-child(1) a{background: url(../img/fun_h_3.png) no-repeat center center;}

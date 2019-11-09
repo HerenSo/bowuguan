@@ -11,8 +11,8 @@
 
 			<div class="one_content">
 				<ul>
-					<li class="on">
-						<div class="one_text indent2em pt220">1928年，获美国哥伦比亚大学地质学硕士学位的矿床学家冯景兰，在我国广东
+					<li class="on" data-id="1">
+						<div class="one_text pt220">1928年，获美国哥伦比亚大学地质学硕士学位的矿床学家冯景兰，在我国广东
 省韶关市仁化县丹霞山注意到了分布广泛的第三纪（6500万年～165万年前）红色
 砂砾岩层。在丹霞山地区，厚达300～500米的岩层被流水、风力等风化侵蚀，形
 成了堡垒状的山峰和峰丛、千姿百态的奇石、石桥和石洞。冯景兰意识到这是一种
@@ -20,9 +20,9 @@
 词源自曹丕的《芙蓉池作诗》，“丹霞夹明月，华星出云间”，指天上的彩霞。</div>
 						<a href="javascript:;">简介</a>
 					</li>
-					<li>
+					<li data-id="2">
 						<div class="one_text pt150">
-							<video width="800" height="" class="video">
+							<video width="780" height="410" class="video">
 								<source src="img/video/1.mp4" type="video/mp4"></source>
 								<!--<source src="img/video/1.ogv" type="video/ogg"></source>
 								<source src="img/video/1.webm" type="video/webm"></source>-->
@@ -46,7 +46,13 @@
 				$(this).removeClass("on");
 			})
 			$(this).parents("li").addClass("on");
-			$(this).siblings("div").find('video')[0].play();
+			
+			$('video').each(function(){
+				$(this)[0].pause();
+			})
+			if($(this).parents("li").attr("data-id") != "1"){
+				$(this).siblings("div").find('video')[0].play();
+			}
 		})
 	</script>
 </html>
