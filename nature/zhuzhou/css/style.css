@@ -107,6 +107,7 @@ body{margin:0px; padding:0px; background:#fff;}
 /*一級*/
 .one{background: url(../img/one_bg.jpg) no-repeat center top #fff;background-size: 100% 100%;font-family: benmo;}
 .one_content li{position: absolute; color: #fff; font-family: benmo; font-size: 54px; text-align: center;text-shadow: 0 3px 8px #666; cursor: pointer;}
+.one_content li a{color: #fff;display: block;}
 .one_content li:nth-child(1){position: relative; top:450px;left: 38px; width: 477px; padding-top: 210px; height: 334px;background: url(../img/one_li01.png) no-repeat; }
 /*.one_content li:nth-child(1):before{content: "";display: block; animation: oneli 6s linear 0s infinite; position:absolute;left: 0;top:0; width: 477px;height: 477px;  background: url(../img/one_li1.png) no-repeat; background-size: 100% 100%; }*/
 .one_content li:nth-child(2){top:616px;left: 494px; width: 405px; padding-top: 160px; height: 269px; background: url(../img/one_li02.png) no-repeat;}
@@ -226,16 +227,41 @@ margin-bottom: 24px;margin-right: 60px;padding-left: 10px; text-align: center;}
 .play_tree img{width: 100%; min-height: 100%;}
 
 /*动物*/
-.two3_info{display: none; width: 1176px; height: 670px; background: url(../img/two4_bg.png) no-repeat;padding-top: 46px;margin-top: 20px;}
+.two4 .two3_nav ul li{font-size: 52px;}
+.two4 .two3_nav ul li.on span{font-size: 52px;}
+
+.two3_info{display: none; width: 1176px; height: 670px; background: url(../img/two4_bg.png) no-repeat;padding-top: 16px;margin-top: 20px;}
 .two3_info.on{display: block;}
 .two3_info ul{}
 .two3_info ul li{display: none; }
-.two3_info ul li.on{display: block; }
-.two3_name{height: 90px;line-height: 90px; text-align: center; font-family: benmo;font-size: 46px; }
-
-
-
-
+.two3_info ul li.on{display: flex; flex-wrap: wrap; }
+.two3_name{width: 100%; height: 90px;line-height: 90px; text-align: center; font-family: benmo;font-size: 46px; }
+.two-light_img{width: 572px;margin-left: 16px; height: 412px; padding:48px 0 0 48px; background: url(../img/two3_img_bg.png) no-repeat;}
+.two-light_img span{width: 522px;height: 352px; border:2px solid #fff;display: block;overflow: hidden;}
+.two-light_img img{width: 100%; min-height: 100%;}
+.two3_xx{width: 414px; height: 442px; padding: 35px 32px 35px 26px;margin-left: 10px; font-size: 16px;font-family: siyuan; margin-top: -20px;line-height: 30px; background: url(../img/two4_text_03.png) no-repeat;}
+.overflowscroll{overflow-y: auto; height: 260px;padding-right: 10px; margin-top: 15px;}
+/*修改滚动条样式*/
+.overflowscroll::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+  /**/
+}
+.overflowscroll::-webkit-scrollbar-track{
+  background: rgb(255, 255, 255,0.5);
+  border-radius:0px;
+}
+.overflowscroll::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.8);
+  border-radius:0px;
+  width: 14px;
+}
+.overflowscroll::-webkit-scrollbar-thumb:hover{
+  background: rgba(255,255,255,0.8);
+}
+.overflowscroll::-webkit-scrollbar-corner{
+  background: #179a16;
+}
 
 
 
