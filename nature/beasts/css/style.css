@@ -52,10 +52,10 @@ body{margin:0px; padding:0px; background:#fff;}
 .one{position: relative; font-family: benmo; background: url(../img/one_bg.jpg) no-repeat center top #fff;background-size: 100% 100%;}
 #toolbar{position:fixed; z-index:3; right:10px; top:10px; padding:5px; }
 #toolbar img{border:none;}
-#img_title{position:absolute; z-index:3; left:10px; right: 10px; top:630px; padding:10px;  color:#FFF; text-align: center; font-size:54px; font-weight: bold; text-transform:uppercase;}
+#img_title{position:absolute; z-index:3; left:10px; right: 10px; top:630px; padding:10px; font-family: haipai;  color:#FFF; text-align: center; font-size:54px; font-weight: bold; text-transform:uppercase;}
 #bg{position:absolute; z-index:1; overflow:hidden; width:100%; height:100%;}
-.bgimg{ width: 780px;height: 490px; overflow: hidden; display: inline-block; position: absolute; border: 1px solid #fff; left: 50%; margin-top: 120px !important; margin-left: -390px !important;}
-#bgimg{display:none; -ms-interpolation-mode: bicubic; width: 100%;height: 100%;  margin: 0 !important;}
+.bgimg{ width: 782px;height: 492px; padding: 2px; overflow: hidden; display: inline-block; position: absolute; border: 1px solid #fff; left: 50%; margin-top: 120px !important; margin-left: -390px !important;}
+#bgimg{display:none; -ms-interpolation-mode: bicubic; width: 780px;height: 490px; margin: 0px !important;border: 1px solid #fff;}
 #preloader{position:relative; z-index:3; width:32px; padding:20px; top:80px; margin:auto; background:#000;}
 #thumbnails_wrapper{z-index:2; position:absolute; top:710px; margin-bottom: 50px; width:100%; background:rgba(255,255,255,0.1); /* stupid ie needs a background value to understand hover area */}
 #outer_container{position:relative; padding:0; width:100%; margin:20px auto;}
@@ -66,7 +66,7 @@ body{margin:0px; padding:0px; background:#fff;}
 #outer_container .thumbScroller .container{position:relative; left:0;}
 #outer_container .thumbScroller .content{float:left;}
 #outer_container .thumbScroller .content a{position: relative;}
-#outer_container .thumbScroller .content a span{position: absolute; left: 0; top:60px; display: block; width: 100%;color: #fff;font-size: 24px; text-align: center; }
+#outer_container .thumbScroller .content a span{position: absolute; left: 0; top:60px;font-family: haipai;  display: block; width: 100%;color: #fff;font-size: 24px; text-align: center; }
 #outer_container .thumbScroller .content div{margin:5px; height:100%;}
 #outer_container .thumbScroller img{box-shadow: 0 0 5px #Fff; opacity: 1 !important;}
 #outer_container .thumbScroller .content div a{display:block; padding:5px;}
@@ -77,7 +77,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .prevImageBtn{margin-left: 60px; background: url(../img/left.png) center center no-repeat;}
 
 /*二级*/
-.two{position: relative;  background: url(../img/two_bg.jpg) no-repeat center top #fff;background-size: 100% 100%;}
+.two{position: relative;  background: url(../img/two_bg2.jpg) no-repeat center top #fff;background-size: 100% 100%;}
 .two-wrap{position: relative; height: 1042px; width: 944px; display: flex; margin: 0 auto; }
 .light{
     position: absolute;
@@ -109,7 +109,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .two-more span{position:absolute; top: 124px; display: block; width: 100%; text-align: center; font-size: 24px; color: #fff; font-weight: bold; letter-spacing: 6px;}
 .two-sound{position: absolute; right: 182px;top: 170px;width: 130px; height: 130px; display: flex;justify-content: center; align-items: center; background: url(../img/two_sound.png) no-repeat center center; z-index: 999; }
 .two-sound.animation img{animation: anima 1s linear infinite;width: 45px; height: 45px;}
-.two-img{padding-bottom: 40px;}
+.two-img{position: absolute; left:50%;top: 155px; width: 772px;height: 717px;margin-left: 396px; background: url(../img/two_k_03.png) no-repeat;}
 .two-title{position: absolute;left: 50%;margin-left: -80px; bottom:58px;width: 158px; height: 70px; font-size: 24px;font-weight: bold; line-height: 68px;color: #fff;text-shadow: 0px 2px 2px #79e5f6;; text-align: center; background: url(../img/two_text.png) no-repeat center bottom;}
 .two-text{position: absolute;padding-left: 268px; padding-bottom: 40px; right: -102px;top: 488px; letter-spacing: 8px; background: url(../img/two_line.png) no-repeat 36px bottom;}
 .two-text span{width: 68px; height: 68px; display: flex; justify-content: center; align-items: center; position: absolute;left: 0; bottom: -26px;}
@@ -241,6 +241,7 @@ body{margin:0px; padding:0px; background:#fff;}
 .info_tag li:nth-child(3){animation: light999 1s linear 0.6s infinite;}*/
 
 
+
 .playimg{
     z-index: 99999;
     width: 938px;
@@ -355,4 +356,23 @@ body{margin:0px; padding:0px; background:#fff;}
             width: 208px;
             height: 148px;
         }
+.second_img{position: absolute; width: 770px; height: 666px; top: 180px; left: 50%; margin-left: -385px;}
+.second_make{position: absolute;top: 0; left: 0; width: 1280px; height: 1024px;}
+.second_make img{width: 100%; height: 100%;}
+.second_img img{width: 100%; min-height: 100%;}
+.second_more{position: absolute;width: 190px; height: 170px; top:290px;left: 90px;}
+.second_more img{width: 100%; min-height: 100%;}
+.second_type{position: absolute;width: 190px; height: 170px; top:666px;left: 210px; cursor: pointer;}
+.second_info{position: absolute;width: 190px; height: 170px; top:630px;right: 150px; cursor: pointer;}
+.second_name{position: absolute;width: 204px; height: 80px; line-height: 80px; bottom: 60px; left: 50%; margin-left: -102px; font-size: 40px; color: #fff; text-align: center; font-family: siyuan; background: url(../img/two_name_bg_03.png) no-repeat;}
 
+@keyframes anima {
+    form{width: 45px; height: 45px;}
+    to{width: 36px;height: 36px;}
+}
+.second_sound{position: absolute; right: 232px;top: 194px;width: 130px; height: 130px; display: flex;justify-content: center; align-items: center; background: url(../img/two_sound.png) no-repeat center center; z-index: 999; }
+.second_sound.animation img{animation: anima 1s linear infinite;width: 45px; height: 45px;}
+
+
+
+.handel{z-index: 9; cursor: pointer;}

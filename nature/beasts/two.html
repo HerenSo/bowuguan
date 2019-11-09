@@ -9,15 +9,29 @@
 		</style>
 	</head>
 	<body class="">
-		<div class="wrap two">
-		<div class="two-more"><img src="img/two_more.png" class="light_animation" /> <div class="more_img"><img src="img/images/1-1.jpg" /></div><span>更多图片</span></div>
+	<div class="wrap two">
+		<!--<div class="two-more">
+			<img src="img/two_more.png" class="light_animation" /> 
+			<div class="more_img"><img src="img/images/1-1.jpg" /></div>
+			<span>更多图片</span>
+		</div>
 		<div class="two-wrap">
 			<div class="two-light light"><img src="img/two_light.png" class="" /> </div>
 			<div class="light"><img src="img/two_l.png" /></div>
-			<div class="two-img light"><img src="img/two_img.png" /></div>
+			<div class="two-img light"><img src="img/two_img11_03.pngg" /></div>
 			<div class="two-title">华南虎</div>
 			<div class="two-sound"><img src="img/two_sound_i.png" /></div>
 			<div class="two-text"><span><img src="img/two_point.png" class="light_animation" /></span><div class="name">详细介绍<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+		</div>-->
+		<div class="two_second">第二版
+			<div class="second_img"><img src="img/images/1.jpg" /></div>
+			<div class="second_more"><img src="img/images/1-1.jpg" /></div>
+			<div class="second_more handel"></div>
+			<div class="second_make"><img src="img/two_make.png" /></div>
+			<div class="second_sound"><img src="img/two_sound_i.png" /></div>
+			<div class="second_type"></div>
+			<div class="second_info"></div>
+			<div class="second_name">华南虎</div>
 		</div>
 		<audio>
 		  <!--<source src="/i/song.ogg" type="audio/ogg">-->
@@ -105,7 +119,7 @@
 	<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script type="text/javascript">
 		var audio = $('audio')[0];  
-		$(".two-sound").click(function(){
+		$(".second_sound").click(function(){
 			$(this).addClass("animation");
 			var that = $(this);
 			audio.play();
@@ -120,10 +134,10 @@
 			})
 			$(this).addClass("on");
 		})
-		$(".two-text .name").click(function(){
+		$(".second_info").click(function(){
 			$(".info").fadeIn(2000);
 		})
-		$(".two-more").click(function(){
+		$(".second_more").click(function(){
 			$(".playimg").fadeIn(2000);
 		})
 		$(".mask").click(function(){
