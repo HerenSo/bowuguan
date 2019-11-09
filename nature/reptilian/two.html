@@ -7,8 +7,9 @@
 		<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
 		
 	</head>
-	<body class="two">
-		<div class="two-more"><img src="img/two_more.png" class="light_animation" /> <div class="more_img"><img src="img/two_icon.png" /></div><span>更多图片</span></div>
+	<body class="">
+	<div class="wrap two">
+		<!--<div class="two-more"><img src="img/two_more.png" class="light_animation" /> <div class="more_img"><img src="img/two_icon.png" /></div><span>更多图片</span></div>
 		<div class="two-wrap">
 			<div class="two-light light"><img src="img/two_light.png" class="" /> </div>
 			<div class="light"><img src="img/two_l.png" /></div>
@@ -16,6 +17,19 @@
 			<div class="two-title">大鲵</div>
 			<div class="two-sound"><img src="img/two_sound_i.png" /></div>
 			<div class="two-text"><span><img src="img/two_point.png" class="light_animation" /></span><div class="name">详细介绍<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+		</div>-->
+		<div class="two_second"><!--第二版-->
+			<div class="second_img"><img src="img/img/1-1.jpg" /></div>
+			<div class="second_more"><img src="img/img/1-4.jpg" /></div>
+			<div class="second_more handel"></div>
+			<div class="second_make"><img src="img/two_make.png" /></div>
+			<div class="second_sound"><img src="img/two_sound_i.png" /></div>
+			<div class="second_type"></div>
+			<div class="second_info"></div>
+			<ul class="pointgroud">
+				<li></li><li></li><li></li><li></li>
+			</ul>
+			<div class="second_name">大鲵</div>
 		</div>
 		<audio>
 		  <!--<source src="/i/song.ogg" type="audio/ogg">-->
@@ -24,7 +38,7 @@
 		</audio>
 		<div class="two-back"><img src="img/back.png" /></div>
 		<!--详情-->
-		<div class="info" style="display: none;">
+		<!--<div class="info" style="display: none;">
 			<div class="mask"></div>
 			<div class="info_wrap">
 				<div class="flex-left">
@@ -47,6 +61,36 @@
 四肢短扁，指、趾前四后五，具微蹼。尾圆形，尾上下有鳍状物。娃娃鱼的体色可随不同的环境而变化，但一般多呈灰
 褐色。体表光滑无鳞，但有各种斑纹，布满粘液。体色随栖居环境色彩而有差异，背面呈棕色、红棕色、黑棕色等，腹
 面浅褐色或灰白色。</div>
+			</div>
+		</div>-->
+		<div class="info" style="display: none;">
+			<div class="mask"></div>
+			<div class="info_wrap">
+				<ul class="info_tag flex-left">
+					<li class="on">形态特征</li>
+					<li>栖息环境</li>
+					<li>生活习性</li>
+				</ul>
+				<div class="info_inb">大鲵是生活在淡水中的两栖动物。是中国特产的一种珍贵野生动物，因其夜间的叫声犹如婴儿啼哭，所以俗称为“娃
+娃鱼”。“娃娃鱼”是两栖动物中体形最大的一种，外形有点类似蜥蜴，只是相比之下更肥壮扁平。大鲵头部扁平、钝圆，
+眼不发达，无眼睑。舌大，扁圆形，前端连于口腔底部。身体前部扁平，至尾部逐渐转为侧扁。体两侧有明显的肤褶，
+四肢短扁，指、趾前四后五，具微蹼。尾圆形，尾上下有鳍状物。娃娃鱼的体色可随不同的环境而变化，但一般多呈灰
+褐色。体表光滑无鳞，但有各种斑纹，布满粘液。体色随栖居环境色彩而有差异，背面呈棕色、红棕色、黑棕色等，腹
+面浅褐色或灰白色。</div>
+			</div>
+		</div>
+		<!--类属-->
+		<div class="category" style="display: none;">
+			<div class="mask"></div>
+			<div class="info_wrap">
+				<div class="flex-left">
+					<div class="info_xx">
+						<div class="f22 pb10">国家二级保护两栖野生动物</div>
+						<div class="pt10 f18">有尾目 | 隐鳃鲵科 | 大鲵属</div>
+						<div class="pt15 pb15 f18">中文名称：大鲵<br />拉丁文名：Andrias davidianus<br />体         型：身长约100-200厘米，体重约20-25千克。</div>
+						
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--更多-->
@@ -94,12 +138,13 @@
 				<span data-u="arrowright" class="jssora05r" style="bottom:30px;right:8px;width:14px;height:148px;"></span>
 			</div>
 		</div>
+		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script type="text/javascript">
 		var audio = $('audio')[0];  
-		$(".two-sound").click(function(){
+		$(".second_sound").click(function(){
 			$(this).addClass("animation");
 			var that = $(this);
 			audio.play();
@@ -114,20 +159,23 @@
 			})
 			$(this).addClass("on");
 		})
-		$(".two-text .name").click(function(){
+		$(".second_info").click(function(){
 			$(".info").fadeIn(2000);
 		})
-		$(".two-more").click(function(){
+		$(".second_more").click(function(){
 			$(".playimg").fadeIn(2000);
+		})
+		$(".second_type").click(function(){
+			$(".category").fadeIn(2000);
 		})
 		$(".mask").click(function(){
 			$(".info").fadeOut(1000);
+			$(".category").fadeOut(1000);
 			$(".playimg").fadeOut(1000);
 		})
 		$(".two-back").click(function(){
 			window.history.go(-1);
 		})
-		
 		jQuery(document).ready(function ($) {
             
             var jssor_1_SlideshowTransitions = [

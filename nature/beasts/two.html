@@ -23,7 +23,7 @@
 			<div class="two-sound"><img src="img/two_sound_i.png" /></div>
 			<div class="two-text"><span><img src="img/two_point.png" class="light_animation" /></span><div class="name">详细介绍<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
 		</div>-->
-		<div class="two_second">第二版
+		<div class="two_second"><!--第二版-->
 			<div class="second_img"><img src="img/images/1.jpg" /></div>
 			<div class="second_more"><img src="img/images/1-1.jpg" /></div>
 			<div class="second_more handel"></div>
@@ -31,6 +31,9 @@
 			<div class="second_sound"><img src="img/two_sound_i.png" /></div>
 			<div class="second_type"></div>
 			<div class="second_info"></div>
+			<ul class="pointgroud">
+				<li></li><li></li><li></li><li></li>
+			</ul>
 			<div class="second_name">华南虎</div>
 		</div>
 		<audio>
@@ -40,7 +43,7 @@
 		</audio>
 		<div class="two-back"><img src="img/back.png" /></div>
 		<!--详情-->
-		<div class="info" style="display: none;">
+		<!--<div class="info" style="display: none;">
 			<div class="mask"></div>
 			<div class="info_wrap">
 				<div class="flex-left">
@@ -62,6 +65,35 @@
 乳白色，全身橙黄色并布满黑色横纹。华南虎的毛皮上有既短又窄的条纹，条纹的间距较孟加拉虎、东北虎的大，体侧
 还常出现菱形纹，在亚种老虎中体型较小。更接近老虎的直系祖先——中华古猫。是中国的十大濒危动物之一、国家一
 级保护动物，红色物种名录极度濒危，在野外已灭绝。</div>
+			</div>
+		</div>-->
+		<div class="info" style="display: none;">
+			<div class="mask"></div>
+			<div class="info_wrap">
+				<ul class="info_tag flex-left">
+					<li class="on">形态特征</li>
+					<li>栖息环境</li>
+					<li>生活习性</li>
+				</ul>
+				<div class="info_inb">华南虎 （厦门虎，南中国虎）。于1981年被列入CITES公约附录Ⅰ保护名单，亦称“中国虎”，华南虎较其他虎种原
+始，头骨长度与头骨宽度的比值较大，体型修长，腹部较细。头圆，耳短，四肢粗大有力，尾较长，胸腹部杂有较多的
+乳白色，全身橙黄色并布满黑色横纹。华南虎的毛皮上有既短又窄的条纹，条纹的间距较孟加拉虎、东北虎的大，体侧
+还常出现菱形纹，在亚种老虎中体型较小。更接近老虎的直系祖先——中华古猫。是中国的十大濒危动物之一、国家一
+级保护动物，红色物种名录极度濒危，在野外已灭绝。</div>
+			</div>
+		</div>
+		<!--类属-->
+		<div class="category" style="display: none;">
+			<div class="mask"></div>
+			<div class="info_wrap">
+				<div class="flex-left">
+					<div class="info_xx">
+						<div class="f22 pb10">国家一级保护动物</div>
+						<div class="pt10 f18">食肉目 | 猫科 | 豹属</div>
+						<div class="pt15 pb15 f18">中文名称：华南虎<br />拉丁文名：Panthera tigris Amoyensis<br/>体         型：体长雄虎2.5米，雌虎2.3米；体重雄虎150千克，雌虎120千克；尾长80-100厘米。</div>
+						
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--更多-->
@@ -140,8 +172,12 @@
 		$(".second_more").click(function(){
 			$(".playimg").fadeIn(2000);
 		})
+		$(".second_type").click(function(){
+			$(".category").fadeIn(2000);
+		})
 		$(".mask").click(function(){
 			$(".info").fadeOut(1000);
+			$(".category").fadeOut(1000);
 			$(".playimg").fadeOut(1000);
 		})
 		$(".two-back").click(function(){
