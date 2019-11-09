@@ -201,6 +201,7 @@ body{margin:0px; padding:0px; background:#fff;}
     /*height: 600px;*/
     z-index: 999999;
     position: relative;
+    font-family: siyuan;
 }
 .info_img{
     width: 506px;
